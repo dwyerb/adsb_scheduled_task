@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="net.muroc.FLTrackPoint" table="adsb_flight_points">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <id name="ID" type="int" column="id">
+            <generator class="assigned"/>
+        </id>
+        <property name="flightHex" column="hex" type="string"/>
+        <property name="flightSquawk" column="squawk" type="string"/>
+        <property name="flightNumber" column="flight" type="string"/>
+        <property name="fLat" column="lat" type="double"/>
+        <property name="fLon" column="lon" type="double"/>
+        <property name="fNucp" column="NUCP" type="double"></property>
+        <property name="fSeen_Pos" column="seen_pos" type="integer"/>
+        <property name="fAltitude" column="altitude" type="integer"/>
+        <property name="fVert_Rate" column="vert_rate" type="integer"/>
+        <property name="fTrack" column="track" type="integer"/>
+        <property name="fSpeed" column="speed" type="integer"/>
+        <property name="fMessages" column="messages" type="integer"/>
+        <property name="fSeen" column="seen" type="integer"/>
+        <property name="fRssi" column="rssi" type="double"></property>
+    </class>
+</hibernate-mapping>
